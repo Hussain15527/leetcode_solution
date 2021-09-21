@@ -1,5 +1,7 @@
 # **Peak Finding**
 
+> QUESTION:
+>
 > we have been given an array and we have to find the peak element, for example the array is **arr[]={1,2,3,4,5,4,3,2}**, then the **5** is the peak since the number before it are less than **5** and numbers after it are greater..
 
 There are two ways we can solve this question:
@@ -10,7 +12,7 @@ There are two ways we can solve this question:
 
    **arr[i-1]<arr[i]>arr[i+1]**, the arr[i] would be the peak element.
 
-   **Time complexity:** O(n)
+   **Time complexity: ** O(n)
 
    **space complexity:** O(1)
 
