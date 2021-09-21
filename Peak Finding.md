@@ -50,6 +50,8 @@ There are two ways we can solve this question:
 
       ​	`start=mid`
 
+      
+      **CODE**
       ```java
       public int peakIndexInMountainArray(int[] arr) {
           int start=0;
