@@ -10,9 +10,9 @@ There are two ways we can solve this question:
 
    **arr[i-1]<arr[i]>arr[i+1]**, the arr[i] would be the peak element.
 
-   **-->Time complexity: ** O(n)
+   **Time complexity: ** O(n)
 
-   **-->space complexity:** O(1)
+   **space complexity:** O(1)
 
 2.  binary search:
 
