@@ -43,8 +43,8 @@ And the complete tranversal the values of a,b and c would be that of first large
 **CODE**
 
 ```java
-		//creating three varaibles
-		int a=Integer.MIN_VALUE;
+	//creating three varaibles
+	int a=Integer.MIN_VALUE;
         int b=Integer.MIN_VALUE;
         int c=Integer.MIN_VALUE;
 		//traveral
