@@ -1,0 +1,21 @@
+#169. Majority Element
+
+```java
+class Solution {
+    public static int majorityElement(int[] nums) {
+        int ME=nums[0];
+        int count=1;
+        for(int i=1;i<nums.length;i++){
+            if(nums[i]==ME){
+                count++;
+            }else if(nums[i]!=ME){
+                if(count==0){
+                    ME=nums[i];
+                    count=1;
+                }else
+                count--;
+            }
+        }return ME;
+    }
+}
+```
