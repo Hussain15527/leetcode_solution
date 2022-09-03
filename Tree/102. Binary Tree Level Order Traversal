@@ -1,0 +1,53 @@
+# Recursive solution
+
+```java
+
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> ans=new ArrayList<>();
+        helper(root,ans,0);
+        return ans;
+    }
+    void helper(TreeNode node,List<List<Integer>> ans,int level){
+        if(node==null){
+            return;
+        }
+        if(ans.size()==level){
+            ans.add(new ArrayList<>());
+        }
+        ans.get(level).add(node.val);
+        helper(node.left,ans,level+1);
+        helper(node.right,ans,level+1);
+        
+    }
+    
+}
+```
+![enter image description here](https://iili.io/6IQze2.jpg)
+## Iterative Solution
+```java
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        
+        Queue<TreeNode> q=new LinkedList<>();
+        q.add(root);
+        // int level=1;
+        List<List<Integer>> ans=new ArrayList<>();
+        if(root==null) return ans;
+        while(!q.isEmpty()){
+            int level=q.size();
+            List<Integer> list=new ArrayList<>();
+            for(int i=0;i<level;i++){
+                TreeNode node=q.poll();
+                list.add(node.val);
+                if(node.left!=null) q.add(node.left);
+                if(node.right!=null) q.add(node.right);
+                
+            }
+            ans.add(list);
+        }
+        
+        return ans;
+    }
+}
+```
